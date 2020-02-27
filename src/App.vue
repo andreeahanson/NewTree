@@ -7,11 +7,19 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
+import { example } from './apiCalls.js'
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+    async created() {
+    try {
+      let res = await example();
+      console.log(res)
+    } catch {
+      (err) => console.log(err)
+      }
   }
 }
 </script>
