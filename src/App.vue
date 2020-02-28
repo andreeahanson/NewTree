@@ -8,21 +8,21 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import CalorieForm from './components/CalorieForm/CalorieForm';
-import { example } from './apiCalls.js'
+// import { example } from './apiCalls.js'
 export default {
   name: 'App',
   components: {
     // HelloWorld,
     CalorieForm
   },
-    async created() {
-    try {
-      let res = await example();
-      console.log(res)
-    } catch {
-      (err) => console.log(err)
-      }
-  }
+  //   async created() {
+  //   try {
+  //     let res = await example();
+  //     console.log(res)
+  //   } catch {
+  //     (err) => console.log(err)
+  //     }
+  // }
 }
 </script>
 
