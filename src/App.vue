@@ -1,26 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <CalorieForm /> 
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import { example } from './apiCalls.js'
+// import HelloWorld from './components/HelloWorld.vue'
+import CalorieForm from './components/CalorieForm/CalorieForm';
+// import { example } from './apiCalls.js'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld,
+    CalorieForm
   },
-    async created() {
-    try {
-      let res = await example();
-      console.log(res)
-    } catch {
-      (err) => console.log(err)
-      }
-  }
+  //   async created() {
+  //   try {
+  //     let res = await example();
+  //     console.log(res)
+  //   } catch {
+  //     (err) => console.log(err)
+  //     }
+  // }
 }
 </script>
 
